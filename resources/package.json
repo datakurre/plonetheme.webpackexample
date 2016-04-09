@@ -40,10 +40,7 @@
     "jquery.cookie": "^1.4.1",
     "moment": "^2.11.2",
     "pickadate": "^3.5.6",
-    "react-dnd": "^2.1.4",
-    "react-dnd-html5-backend": "^2.1.2",
-    "react-lite": "0.0.25",
-    "react-tag-input": "^2.2.5",
+    "react-lite": "^0.15.7",
     "redux": "^3.3.1",
     "select2": "^3.5.1",
     "underscore": "^1.8.3"
