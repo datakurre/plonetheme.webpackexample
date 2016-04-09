@@ -35,7 +35,7 @@ function serialize(state) {
   return license;
 }
 
-function reducer(state=[], action) {
+function reducer(state={}, action) {
   switch (action.type) {
     case SET_SHARING:
       state = {
