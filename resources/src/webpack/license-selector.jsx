@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore, compose } from 'redux'
+import {createStore, compose} from 'redux'
 import Registry from 'pat-registry';
 
 const YES = 'YES';
@@ -66,36 +66,36 @@ export default class LicenseSelector extends React.Component {
         <p>
           Allow adaptations of your work to be shared?<br/>
           <input type="radio" id="license-sharing-yes"
-                 name="license-sharing" value={ YES }
-                 checked={ sharing === YES ? true : null }
-                 onChange={ (e) => e.target.checked ? setSharing(YES) : null } />
+                 name="license-sharing" value={YES}
+                 checked={sharing === YES ? true : null}
+                 onChange={(e) => e.target.checked ? setSharing(YES) : null} />
           <label htmlFor="license-sharing-yes">Yes</label>
           <input type="radio" id="license-sharing-no"
-                 name="license-sharing" value={ NO }
-                 checked={ sharing === NO ? true : null }
-                 onChange={ (e) => e.target.checked ? setSharing(NO) : null } />
+                 name="license-sharing" value={NO}
+                 checked={sharing === NO ? true : null}
+                 onChange={(e) => e.target.checked ? setSharing(NO) : null} />
           <label htmlFor="license-sharing-no">No</label>
           <input type="radio" id="license-sharing-alike"
-                 name="license-sharing" value={ ALIKE }
-                 checked={ sharing === ALIKE ? true : null }
-                 onChange={ (e) => e.target.checked ? setSharing(ALIKE) : null } />
+                 name="license-sharing" value={ALIKE}
+                 checked={sharing === ALIKE ? true : null}
+                 onChange={(e) => e.target.checked ? setSharing(ALIKE) : null} />
           <label htmlFor="license-sharing-alike">Yes, as long as other share alike</label>
         </p>
         <p>
           Allow commercial uses of your work?<br/>
           <input type="radio" id="license-commercial-yes"
-                 name="license-commercial" value={ YES }
-                 checked={ commercial === YES ? true : null }
-                 onChange={ (e) => e.target.checked ? setCommercial(YES) : null } />
+                 name="license-commercial" value={YES}
+                 checked={commercial === YES ? true : null}
+                 onChange={(e) => e.target.checked ? setCommercial(YES) : null} />
           <label htmlFor="license-commercial-yes">Yes</label>
           <input type="radio" id="license-commercial-no"
-                 name="license-commercial" value={ NO }
-                 checked={ commercial === NO ? true : null }
-                 onChange={ (e) => e.target.checked ? setCommercial(NO) : null } />
+                 name="license-commercial" value={NO}
+                 checked={commercial === NO ? true : null}
+                 onChange={(e) => e.target.checked ? setCommercial(NO) : null} />
           <label htmlFor="license-commercial-no">No</label>
         </p>
-        <p><img src={ 'https://i.creativecommons.org/l/' + license + '/4.0/88x31.png'}
-                alt={ license }/></p>
+        <p><img src={'https://i.creativecommons.org/l/' + license + '/4.0/88x31.png'}
+                alt={license}/></p>
       </div>
     );
   }
@@ -136,7 +136,7 @@ Registry.register({
       // (Re)render stateless widget
       ReactDOM.render((
         <LicenseSelector
-          { ...store.getState() }
+          {...store.getState()}
           setSharing={ (value) => store.dispatch({
             type: SET_SHARING,
             value: value
