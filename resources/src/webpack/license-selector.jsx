@@ -120,7 +120,7 @@ Registry.register({
     const store = module.hot  // Support Redux DevTools for Chrome in dev mode
       ? compose(window.devToolsExtension ? window.devToolsExtension() : f => f)
                (createStore)(reducer, deserialize($el.val()))
-      : createStore(options, deserialize($el.val()));
+      : createStore(reducer, deserialize($el.val()));
 
     // Create container for the widget
     const container = document.createElement('div');
