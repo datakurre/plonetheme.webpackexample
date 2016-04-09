@@ -1,15 +1,12 @@
-export PATH := $(PATH):node_modules/.bin
-
 LIB = lib/plonetheme.webpack/.git
-WEBPACK_SOURCES = $(wildcard theme/*) webpack.config.js
 
 all: build
 
-build: clean node_modules $(LIB) $(SOURCES)
-	webpack
+build: clean node_modules $(LIB)
+	node_modules/.bin/webpack
 
-watch: clean node_modules $(LIB) $(SOURCES)
-	PORT=8090 TARGET=watch webpack-dev-server
+watch: clean node_modules $(LIB)
+	PORT=8090 TARGET=watch node_modules/.bin/webpack-dev-server
 
 clean:
 	rm -rf theme
