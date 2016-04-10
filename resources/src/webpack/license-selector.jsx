@@ -13,7 +13,7 @@ function deserialize(value) {
   return {
     'license': value.length ? value : 'by',
     'sharing':
-      value.match('-nd') ? NO : value.match('-sa') ? NO : YES,
+      value.match('-nd') ? NO : value.match('-sa') ? ALIKE : YES,
     'commercial':
       value.match('-nc') ? NO : YES
   }
