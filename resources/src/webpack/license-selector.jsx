@@ -138,7 +138,7 @@ Registry.register({
         <LicenseSelector
           // Pass state
           {...store.getState()}
-          // Pass Redux action factors
+          // Pass Redux action factories
           setSharing={(value) => store.dispatch({
             type: SET_SHARING,
             value: value
