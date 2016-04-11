@@ -137,11 +137,11 @@ Registry.register({
       ReactDOM.render((
         <LicenseSelector
           {...store.getState()}
-          setSharing={ (value) => store.dispatch({
+          setSharing={(value) => store.dispatch({
             type: SET_SHARING,
             value: value
           })}
-          setCommercial={ (value) => store.dispatch({
+          setCommercial={(value) => store.dispatch({
             type: SET_COMMERCIAL,
             value: value
           })}
