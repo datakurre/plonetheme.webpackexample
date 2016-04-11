@@ -114,9 +114,10 @@ Registry.register({
   trigger: '.pat-license-selector',
 
   init ($el) {
+    // Get form input element and hide it
     const el = $el.hide().get(0);
 
-    // Initialize Redux Store from the input field value
+    // Define Redux store and initialize it from the field value
     const store = module.hot  // Support Redux DevTools for Chrome in dev mode
       ? compose(window.devToolsExtension ? window.devToolsExtension() : f => f)
                (createStore)(reducer, deserialize($el.val()))
@@ -127,15 +128,17 @@ Registry.register({
     el.parentNode.insertBefore(container, el);
     container.className = 'license-selector';
 
-    // Render widget
+    // Define main render
     function render () {
-      // Serialize value into input field
+      // Serialize current widget value back into input field
       $el.val(serialize(store.getState()));
 
-      // (Re)render stateless widget
+      // Render widget with current state
       ReactDOM.render((
         <LicenseSelector
+          // Pass state
           {...store.getState()}
+          // Pass Redux action factors
           setSharing={(value) => store.dispatch({
             type: SET_SHARING,
             value: value
@@ -148,10 +151,10 @@ Registry.register({
       ), container);
     }
 
-    // Subscribe re-render after each store change
+    // Subscribe to render when state changes
     store.subscribe(render);
 
-    // Initial rendering
+    // Call initial render
     render();
   }
 });
