@@ -131,7 +131,6 @@ Registry.register({
     function render () {
       // Serialize value into input field
       $el.val(serialize(store.getState()));
-      console.log($el.val());
 
       // (Re)render stateless widget
       ReactDOM.render((
