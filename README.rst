@@ -26,3 +26,8 @@ or
 
    $ cd resources
    $ make watch
+
+   $ open http://localhost:8080/Plone/  # login and enable the theme
+
+Please, be aware that Plone must be running while running the build, because
+webpack fetches all the default resources directly from a Plone site.
