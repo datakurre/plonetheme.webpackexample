@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {createStore, compose} from 'redux'
-import Registry from 'patternslib/core/registry';
+import Registry from 'pat-registry';
 
 const YES = 'YES';
 const NO = 'NO';

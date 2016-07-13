@@ -11,7 +11,7 @@
          content="/html/body//script" />
 
   <!-- Drop anonymous bundle for logged-in-users -->
-  <drop css:if-content=".userrole-authenticated"
+  <drop css:if-content="body.userrole-authenticated"
         theme="//*[@data-name='bundle-anonymous']" />
 
   <!-- Drop logged-in bundles for anonymous users -->

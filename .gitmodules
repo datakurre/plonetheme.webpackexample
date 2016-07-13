@@ -1,4 +1,0 @@
-[submodule "resources/lib/plonetheme.webpack"]
-	path = resources/lib/plonetheme.webpack
-	url = git@github.com:datakurre/plonetheme.webpack
-	branch = master
