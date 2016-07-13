@@ -8,6 +8,9 @@
   <!-- Import Barceloneta rules -->
   <xi:include href="++theme++barceloneta/rules.xml" />
 
+  <!-- Import TTW customizations -->
+  <xi:include href="++theme++custom/rules.xml" />
+
   <!-- Configure webpack built bundles -->
   <xi:include href="webpack.xml" />
 
