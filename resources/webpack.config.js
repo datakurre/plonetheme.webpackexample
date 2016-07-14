@@ -55,11 +55,10 @@ switch(path.basename(process.argv[1])) {
       }
     });
     break;
-  
+
   case 'webpack-dev-server':
     module.exports = merge(PLONE.development, common, {
       entry: path.join(PATHS.src, 'authenticated')
     });
     break;
 }
-console.log(module.exports);
