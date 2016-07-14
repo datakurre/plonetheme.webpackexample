@@ -29,7 +29,7 @@ bin/buildout: bootstrap-buildout.py buildout.cfg
 	python bootstrap-buildout.py -c buildout.cfg
 
 bin/instance: $(BUILDOUT_BIN) buildout.cfg
-	$(BUILDOUT_BIN) -N $(BUILDOUT_ARGS) install instance
+	$(BUILDOUT_BIN) -N $(BUILDOUT_ARGS) install plonesite instance
 
 resources/theme: bin/instance resources/Makefile
 	bin/instance start; \
